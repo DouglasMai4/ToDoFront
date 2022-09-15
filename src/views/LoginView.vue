@@ -44,10 +44,13 @@
 
           setTimeout(() => {this.msg = null}, 4500)
         } else {
-          const users = await axios.get('https://todo-b4ck.herokuapp.com/login/list')
+          const req = await axios.get('https://todo-b4ck.herokuapp.com/login/list')
 
-          console.log('User: ', users.data[0])
-          console.log('User 1: ', users.username)
+          const data = users.data
+
+          const users = data
+
+          console.log('User 1: ', users[0].username)
         }
       }
     }
