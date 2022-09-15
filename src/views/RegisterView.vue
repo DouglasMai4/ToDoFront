@@ -53,7 +53,7 @@
 						'password': `${this.senha}`
 					})
 
-					console.log('Req: ', req)
+					console.log('Req: ', req.response.data.error)
 
 					if (req.status === 201) {
 						this.msg = `${req.data[0].message}`
