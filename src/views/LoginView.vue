@@ -71,10 +71,13 @@
       },
       async change() {
         console.log('Change')
+        console.log('Login Before: ', this.login)
 
         if (this.login === true) {
+          console.log('Login True')
           this.login = false
         } else {
+          console.log('Login False')
           this.login = true
         }
       }
