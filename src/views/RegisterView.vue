@@ -38,6 +38,24 @@
 				e.preventDefault()
 
 				console.log('Register')
+
+				if (this.usuario === null || this.usuario === '') {
+					this.msg = 'O usuário não deve ficar vazio'
+
+					setTimeout(() => {this.msg = null}, 4500)
+				} else if (this.senha === null || this.senha === '') {
+					this.msg = 'A senha não deve ficar vazia'
+
+					setTimeout(() => {this.msg = null}, 4500)
+				} else {
+					const req = await axios.get('https://todo-b4ck.herokuapp.com/login/list')
+
+					const data = req.data
+
+					const users = data
+
+					console.log('User 1: ', users[0].username)
+				}
 			}
 		}
 	}
