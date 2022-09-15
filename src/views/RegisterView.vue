@@ -59,7 +59,7 @@
 						this.msg = `${req.data[0].message}`
 					} else {
 						// this.msg = `${req.data[0].error}`
-						console.log(req)
+						console.log('Req: ', req)
 					}
 
 					setTimeout(() => {this.msg = null}, 4500)
