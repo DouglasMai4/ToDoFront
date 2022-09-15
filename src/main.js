@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
+import store from './store'
 
 import './assets/main.css'
 
@@ -17,6 +18,8 @@ library.add(faUser, faUserPlus, faPen, faEye, faEyeSlash, faArrowRightToBracket)
 // FontAwesowe
 
 app.use(router)
+
+app.use(store)
 
 app.component('font-awesome-icon', FontAwesomeIcon)
 
