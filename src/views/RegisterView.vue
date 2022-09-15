@@ -30,7 +30,8 @@
 		data() {
 			return {
 				usuario: null,
-				senha: null
+				senha: null,
+				msg: null
 			}
 		},
 		methods: {
