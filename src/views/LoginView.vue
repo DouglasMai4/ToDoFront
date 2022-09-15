@@ -56,9 +56,17 @@
           if (req.status === 201) {
             console.log('User: ', req)
 
+            this.$store.commit('login', user.username, user.id)
+
             this.msg = 'Login realizado com sucesso!'
 
-            setTimeout(() => {this.msg = null}, 4500)
+            const user = req.data
+
+            setTimeout(() => {
+              this.msg = null
+
+              this.$router.push('/home')
+            }, 4500)
           } else if (req.status === 200) {
             this.msg = 'Usuário não encontrado!'
             
