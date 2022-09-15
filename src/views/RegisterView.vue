@@ -59,7 +59,7 @@
 						this.msg = 'Usuário Registrado com sucesso'
 
 						setTimeout(() => {this.msg = null}, 4500)
-					} else if (req.status === 409) {
+					} else if (req.status === 200) {
 						this.msg = 'Usuário já cadastrado'
 						
 						setTimeout(() => {this.msg = null}, 4500)
