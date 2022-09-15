@@ -36,7 +36,7 @@
 			async buttonFunction(e) {
 				e.preventDefault()
 
-				if (this.showPass === false && this.type === 'password') {
+				if (this.showPass === false && this.type === 'password' && this.lb === 'Senha') {
 					this.type = 'text'
 					this.showPass = true
 				} else {

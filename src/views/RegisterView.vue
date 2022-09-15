@@ -53,15 +53,15 @@
 						'password': `${this.senha}`
 					})
 
-					console.log('Req: ', req.response.data.error)
+					console.log('Req: ', req)
 
-					if (req.status === 201) {
-						this.msg = `${req.data[0].message}`
-					} else {
-						this.msg = `${req.response.data.error}`
-					}
+					// if (req.status === 201) {
+					// 	this.msg = `${req.data[0].message}`
+					// } else {
+					// 	this.msg = `${req.response.data.error}`
+					// }
 
-					setTimeout(() => {this.msg = null}, 4500)
+					// setTimeout(() => {this.msg = null}, 4500)
 				}
 			}
 		}
