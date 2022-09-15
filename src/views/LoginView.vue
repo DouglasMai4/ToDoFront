@@ -48,7 +48,7 @@
 
           setTimeout(() => {this.msg = null}, 4500)
         } else {
-          const req = await axios.post('https://todo-b4ck.herokuapp.com/login/register', {
+          const req = await axios.post('https://todo-b4ck.herokuapp.com/login', {
             'username': `${this.usuario}`,
             'password': `${this.senha}`
           })
