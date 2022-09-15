@@ -58,8 +58,7 @@
 					if (req.status === 201) {
 						this.msg = `${req.data[0].message}`
 					} else {
-						// this.msg = `${req.data[0].error}`
-						console.log('Req: ', req)
+						this.msg = `${req.response.data.error}`
 					}
 
 					setTimeout(() => {this.msg = null}, 4500)
