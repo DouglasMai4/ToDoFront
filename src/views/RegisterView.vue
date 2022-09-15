@@ -53,8 +53,6 @@
 						'password': `${this.senha}`
 					})
 
-					console.log('Status: ', req.status)
-
 					if (req.status === 201) {
 						this.msg = 'Usuário Registrado com sucesso'
 
