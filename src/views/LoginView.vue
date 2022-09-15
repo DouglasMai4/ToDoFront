@@ -1,24 +1,13 @@
 <template>
   <main>
-    <form v-show="login" @submit="login">
+    <form @submit="login">
       <h1>Entrar</h1>
       <Input @data="(e) => this.usuario = e" tp="text" lb="Usuario" />
       <Input @data="(e) => this.senha = e" tp="password" lb="Senha" />
       <Button tp="submit" lb="Entrar" />
       <div class="info-container">
         <h2>Não tem uma conta ?</h2>
-        <p>Não tem problema, <a @click="change">clique aqui</a> e crie uma!</p>
-      </div>
-    </form>
-
-    <form v-show="!login" @submit="register">
-      <h1>Registrar-se</h1>
-      <Input @data="(e) => this.usuario = e" tp="text" lb="Usuario" />
-      <Input @data="(e) => this.senha = e" tp="password" lb="Senha" />
-      <Button tp="submit" lb="Registrar" />
-      <div class="info-container">
-        <h2>Já tem uma conta ?</h2>
-        <p>Então <a @click="change">clique aqui</a> e faça login!</p>
+        <p>Não tem problema, <RouterLink to="/register">clique aqui</RouterLink> e crie uma!</p>
       </div>
     </form>
   </main>
@@ -67,18 +56,6 @@
           const users = data
 
           console.log('User 1: ', users[0].username)
-        }
-      },
-      async change() {
-        console.log('Change')
-        console.log('Login Before: ', this.login)
-
-        if (this.login === true) {
-          console.log('Login True')
-          this.login = false
-        } else {
-          console.log('Login False')
-          this.login = true
         }
       }
     }
