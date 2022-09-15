@@ -54,11 +54,11 @@
           })
 
           if (req.status === 201) {
+            console.log('User: ', req)
+
             this.msg = 'Login realizado com sucesso!'
 
             setTimeout(() => {this.msg = null}, 4500)
-
-            console.log('User: ', req)
           } else if (req.status === 200) {
             this.msg = 'Usuário não encontrado!'
             
