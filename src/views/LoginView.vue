@@ -1,24 +1,24 @@
 <template>
   <main>
-    <form @submit="login" v-show="!login">
+    <form @submit="login" v-show="login === true">
       <h1>Entrar</h1>
       <Input @data="(e) => this.usuario = e" tp="text" lb="Usuario" />
       <Input @data="(e) => this.senha = e" tp="password" lb="Senha" />
       <Button tp="submit" lb="Entrar" />
       <div class="info-container">
         <h2>Não tem uma conta ?</h2>
-        <p>Não tem problema, <a @click="change">clique aqui</a> e crie uma!</p>
+        <p>Não tem problema, <a @click="change" href="">clique aqui</a> e crie uma!</p>
       </div>
     </form>
 
-    <form @submit="register" v-show="login">
+    <form @submit="register" v-show="login === false">
       <h1>Registrar-se</h1>
       <Input @data="(e) => this.usuario = e" tp="text" lb="Usuario" />
       <Input @data="(e) => this.senha = e" tp="password" lb="Senha" />
       <Button tp="submit" lb="Registrar" />
       <div class="info-container">
         <h2>Já tem uma conta ?</h2>
-        <p>Então<a @click="change">clique aqui</a> e faça login!</p>
+        <p>Então <a @click="change" href="">clique aqui</a> e faça login!</p>
       </div>
     </form>
   </main>
