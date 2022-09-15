@@ -11,6 +11,7 @@
 	      </div>
 	    </form>
 	</main>
+	<Message v-if="msg" :msg="msg" />
 </template>
 
 <script>
