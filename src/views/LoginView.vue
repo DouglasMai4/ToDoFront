@@ -1,13 +1,24 @@
 <template>
   <main>
-    <form @submit="login">
-      <h1>Login</h1>
+    <form @submit="login" v-if="login">
+      <h1>Entrar</h1>
       <Input @data="(e) => this.usuario = e" tp="text" lb="Usuario" />
       <Input @data="(e) => this.senha = e" tp="password" lb="Senha" />
       <Button tp="submit" lb="Entrar" />
       <div class="info-container">
         <h2>Não tem uma conta ?</h2>
         <p>Não tem problema, <a @click="change">clique aqui</a> e crie uma!</p>
+      </div>
+    </form>
+
+    <form @submit="register" v-if="!login">
+      <h1>Registrar-se</h1>
+      <Input @data="(e) => this.usuario = e" tp="text" lb="Usuario" />
+      <Input @data="(e) => this.senha = e" tp="password" lb="Senha" />
+      <Button tp="submit" lb="Registrar" />
+      <div class="info-container">
+        <h2>Já tem uma conta ?</h2>
+        <p>Então<a @click="change">clique aqui</a> e faça login!</p>
       </div>
     </form>
   </main>
@@ -32,7 +43,8 @@
       return {
         usuario: null,
         senha: null,
-        msg: null
+        msg: null,
+        login: true
       }
     },
     methods: {
@@ -55,6 +67,13 @@
           const users = data
 
           console.log('User 1: ', users[0].username)
+        }
+      },
+      async change() {
+        if (this.login === true) {
+          this.login = false
+        } else {
+          this.login = true
         }
       }
     }
