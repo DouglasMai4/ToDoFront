@@ -53,13 +53,11 @@
 						'password': `${this.senha}`
 					})
 
-					console.log('Req: ', req)
-
 					if (req.status === 201) {
 						this.msg = 'Usuário Registrado com sucesso'
 
 						setTimeout(() => {this.msg = null}, 4500)
-					} else {
+					} else if (req.status === 204) {
 						this.msg = 'Usuário já cadastrado'
 						
 						setTimeout(() => {this.msg = null}, 4500)
