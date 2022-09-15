@@ -5,6 +5,10 @@
       <Input @data="(e) => this.usuario = e" tp="text" lb="Usuario" />
       <Input @data="(e) => this.senha = e" tp="password" lb="Senha" />
       <Button tp="submit" lb="Entrar" />
+      <div class="info-container">
+        <h2>Não tem uma conta ?</h2>
+        <p>Não tem problema, <a @click="change">clique aqui</a> e crie uma!</p>
+      </div>
     </form>
   </main>
   <Message v-if="msg" :msg="msg" />
@@ -80,5 +84,14 @@
     text-align: center;
 
     backdrop-filter: blur(5px);
+  }
+
+  a {
+    text-decoration: none;
+    color: var(--c-primary);
+  }
+  a:hover {
+    cursor: pointer;
+    text-decoration: underline;
   }
 </style>
