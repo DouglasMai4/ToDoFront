@@ -2,6 +2,8 @@
 	<button :type="tp" >
 		{{ lb }}
 		<font-awesome-icon v-show="lb === 'Entrar'" icon="fa-solid fa-arrow-right-to-bracket" />
+		<font-awesome-icon v-show="lb === 'Registrar'" icon="fa-solid fa-user-plus" />
+
 	</button>
 </template>
 

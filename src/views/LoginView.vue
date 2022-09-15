@@ -70,6 +70,8 @@
         }
       },
       async change() {
+        console.log('Change')
+
         if (this.login === true) {
           this.login = false
         } else {
