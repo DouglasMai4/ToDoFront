@@ -55,13 +55,16 @@
 
 					console.log('Req: ', req)
 
-					// if (req.status === 201) {
-					// 	this.msg = `${req.data[0].message}`
-					// } else {
-					// 	this.msg = `${req.response.data.error}`
-					// }
+					if (req.status === 201) {
+						this.msg = 'Usuário Registrado com sucesso'
 
-					// setTimeout(() => {this.msg = null}, 4500)
+						setTimeout(() => {this.msg = null}, 4500)
+					} else {
+						this.msg = 'Usuário já cadastrado'
+						
+						setTimeout(() => {this.msg = null}, 4500)
+					}
+
 				}
 			}
 		}
