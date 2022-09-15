@@ -56,11 +56,12 @@
           if (req.status === 201) {
             console.log('User: ', req)
 
+            const user = req.data
+
             this.$store.commit('login', user.username, user.id)
 
             this.msg = 'Login realizado com sucesso!'
 
-            const user = req.data
 
             setTimeout(() => {
               this.msg = null
