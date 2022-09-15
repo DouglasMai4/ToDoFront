@@ -1,6 +1,6 @@
 <template>
   <main>
-    <form @submit="login" v-show="login === true">
+    <form v-show="!login" @submit="login">
       <h1>Entrar</h1>
       <Input @data="(e) => this.usuario = e" tp="text" lb="Usuario" />
       <Input @data="(e) => this.senha = e" tp="password" lb="Senha" />
@@ -11,7 +11,7 @@
       </div>
     </form>
 
-    <form @submit="register" v-show="login === false">
+    <form v-show="login" @submit="register">
       <h1>Registrar-se</h1>
       <Input @data="(e) => this.usuario = e" tp="text" lb="Usuario" />
       <Input @data="(e) => this.senha = e" tp="password" lb="Senha" />
