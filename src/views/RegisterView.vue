@@ -39,8 +39,6 @@
 			async register(e) {
 				e.preventDefault()
 
-				console.log('Register')
-
 				if (this.usuario === null || this.usuario === '') {
 					this.msg = 'O usuário não deve ficar vazio'
 
@@ -54,6 +52,8 @@
 						'username': `${this.usuario}`,
 						'password': `${this.senha}`
 					})
+
+					console.log('Req: ', req)
 
 					if (req.status === 201) {
 						this.msg = `${req.data[0].message}`
