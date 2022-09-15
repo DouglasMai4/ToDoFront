@@ -25,5 +25,5 @@ body {
   font-size: 1em;
 
   background-color: var(--bg-color);
-  background-image: url("/imgs/background.jpg");
+  /*background-image: url("/imgs/background.jpg");*/
 }
