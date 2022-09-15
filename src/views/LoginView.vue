@@ -46,7 +46,7 @@
         } else {
           const users = await axios.get('https://todo-b4ck.herokuapp.com/login/list')
 
-          console.log('User: ', users)
+          console.log('User: ', users.data[0])
           console.log('User 1: ', users.username)
         }
       }
