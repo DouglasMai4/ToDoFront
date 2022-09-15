@@ -46,7 +46,7 @@
         } else {
           const req = await axios.get('https://todo-b4ck.herokuapp.com/login/list')
 
-          const data = users.data
+          const data = req.data
 
           const users = data
 
