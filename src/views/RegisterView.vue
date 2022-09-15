@@ -14,8 +14,19 @@
 </template>
 
 <script>
+	import Input from '../components/form/Input.vue'
+	import Button from '../components/form/Button.vue'
+	import Message from '../components/Message.vue'
+
+	import axios from 'axios'
+
 	export default {
 		name: 'Register',
+		components: {
+	      Input,
+	      Button,
+	      Message
+	    },
 		data() {
 			return {
 				usuario: null,
