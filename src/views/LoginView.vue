@@ -33,7 +33,6 @@
         usuario: null,
         senha: null,
         msg: null,
-        login: true
       }
     },
     methods: {
