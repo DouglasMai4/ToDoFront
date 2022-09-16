@@ -12,9 +12,17 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
-import { faUser, faUserPlus, faPen, faEye, faEyeSlash, faArrowRightToBracket } from '@fortawesome/free-solid-svg-icons'
+import { faUser, faUserPlus, faPen,
+		 faEye, faEyeSlash,
+		 faArrowRightToBracket,
+		 faArrowRightFromBracket,
+		 faTrash, faPlus, faCheck } from '@fortawesome/free-solid-svg-icons'
 
-library.add(faUser, faUserPlus, faPen, faEye, faEyeSlash, faArrowRightToBracket)
+library.add(faUser, faUserPlus, faPen,
+			faEye, faEyeSlash,
+			faArrowRightToBracket,
+			faArrowRightFromBracket,
+			faTrash, faPlus, faCheck)
 // FontAwesowe
 
 app.use(router)

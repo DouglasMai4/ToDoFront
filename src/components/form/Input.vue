@@ -2,15 +2,16 @@
 	<div class="input-container">
 		<input :type="type" v-model="data">
 		<label>{{ label }}</label>
-		<span v-show="!action">
+		<span v-if="!action">
 			<font-awesome-icon v-show="lb === 'Usuario'" icon="fa-solid fa-user" />
 			<font-awesome-icon v-show="lb != 'Usuario'" icon="fa-solid fa-pen" />
 		</span>
-		<button v-show="action" @click="buttonFunction">
-			<span class="password-icons">
+		<button v-if="action" @click="buttonFunction">
+			<span v-show="tp === 'password'" class="password-icons">
 				<font-awesome-icon v-show="!showPass" icon="fa-solid fa-eye" />
 				<font-awesome-icon v-show="showPass" icon="fa-solid fa-eye-slash" />
 			</span>
+			<font-awesome-icon v-show="lb === 'Adicionar'" icon="fa-solid fa-plus" />
 		</button>
 	</div>
 </template>
@@ -36,12 +37,12 @@
 			async buttonFunction(e) {
 				e.preventDefault()
 
-				if (this.showPass === false && this.type === 'password' && this.lb === 'Senha') {
+				if (this.lb === 'Senha' && this.type === 'password') {
 					this.type = 'text'
-					this.showPass = true
-				} else {
+				} else if (this.lb === 'Senha' && this.type === 'text') {
 					this.type = 'password'
-					this.showPass = false
+				} else {
+					this.$emit('btn')
 				}
 			}
 		},
@@ -49,7 +50,7 @@
 			this.type = this.tp
 			this.label = this.lb
 
-			if (this.tp === 'password' || this.lb === 'Senha') {
+			if (this.tp === 'password' || this.lb === 'Senha' || this.lb === 'Adicionar') {
 				this.action = true
 			}
 		},

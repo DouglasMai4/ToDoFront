@@ -15,6 +15,9 @@
   --c-secondary: #7D1E6A;
   --c-secondary-tran: rgba(125, 30, 106, 0.7);
 
+  --c-error: #CC3636;
+  --c-error-tran: rgba(204, 54, 54, 0.7);
+
   --c-text-primary: #FFF;
   --c-text-secondary: #121212;
 
@@ -24,6 +27,8 @@
 body {
   font-size: 1em;
 
-  background-color: var(--bg-color);
-  /*background-image: url("/imgs/background.jpg");*/
+  background-color: var(--bg-color-secondary);
+  background-image: url("/imgs/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }

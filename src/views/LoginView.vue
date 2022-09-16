@@ -46,7 +46,7 @@
         } else if (this.senha === null || this.senha === '') {
           this.msg = 'A senha não deve ficar vazia'
 
-          setTimeout(() => {this.msg = null}, 4500)
+          setTimeout(() => {this.msg = null}, 4000)
         } else {
           const req = await axios.post('https://todo-b4ck.herokuapp.com/login', {
             'username': `${this.usuario}`,
@@ -54,11 +54,9 @@
           })
 
           if (req.status === 201) {
-            console.log('User: ', req)
-
             const user = req.data
 
-            this.$store.commit('login', user.username, user.id)
+            this.$store.commit('login', user)
 
             this.msg = 'Login realizado com sucesso!'
 
@@ -66,7 +64,7 @@
             setTimeout(() => {
               this.msg = null
 
-              this.$router.push('/home')
+              this.$router.push('/')
             }, 4500)
           } else if (req.status === 200) {
             this.msg = 'Usuário não encontrado!'

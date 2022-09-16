@@ -4,28 +4,30 @@ const store = createStore({
   state () {
     return {
       username: null,
-      user_id: null
+      id: null
     }
   },
   mutations: {
-    login (state, user, userId) {
-      state.username = user
-      localStorage.setItem('username', user)
-      
-      state.user_id = userId
-      localStorage.setItem('user_id', userId)
+    login (state, obj) {
+      const user = obj
+
+      state.username = user.username
+      localStorage.setItem('username', user.username)
+
+      state.id = user.id
+      localStorage.setItem('id', user.id)
     },
     logout(state){
       state.username = null
       localStorage.removeItem('username')
 
-      state.user_id = null
-      localStorage.removeItem('user_id')
+      state.id = null
+      localStorage.removeItem('id')
     },
     initialiseStore(state) {
-      if (localStorage.getItem('username')) {
+      if (localStorage.getItem('username') && localStorage.getItem('id')) {
         state.username = localStorage.getItem('username')
-        state.user_id = localStorage.getItem('user_id')
+        state.id = localStorage.getItem('id')
        }
     }
   }
