@@ -17,13 +17,13 @@
 				type="text"
 				label="Usuário"
 				:action="false"
-				@data="(e) => this.usr = e"
+				v-model="usr"
 			/>
 			<formInput
 				type="password"
 				label="Senha"
 				:action="true"
-				@data="(e) => this.pass = e"
+				v-model="pass"
 			/>
 
 			<formButton label="Entrar" type="submit" />

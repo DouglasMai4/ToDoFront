@@ -20,8 +20,7 @@
 				label="Adicionar"
 				type="text"
 				:action="true"
-				@data="(e) => this.titulo = e"
-				@add="addItem(loginStore.usr_id)"
+				v-model="titulo"
 			/>
 			<hr />
 			<Item

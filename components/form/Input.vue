@@ -1,7 +1,7 @@
 <template>
 	<div class="input-container">
 		<label>{{ lb }}</label>
-		<input :type="tp" v-model="data">
+		<input :type="tp" :value="modelValue" @input="updateValue">
 		<button v-if="action" @click="buttonFunction">
 			<span v-if="lb === 'Senha'" class="pass-icons">
 				<font-awesome-icon icon="fa-solid fa-eye" v-show="!showPass" />
@@ -21,14 +21,14 @@
 			return {
 				lb: null,
 				tp: null,
-				data: null,
-				showPass: false
+				showPass: false,
 			}
 		},
 		props: {
 			type: String,
 			label: String,
-			action: Boolean
+			action: Boolean,
+			modelValue: '',
 		},
 		methods: {
 			async buttonFunction(e) {
@@ -43,14 +43,14 @@
 				} else if (this.label === 'Adicionar') {
 					this.$emit('add')
 				}
+			},
+			updateValue(event) {
+				this.$emit('update:modelValue', event.target.value)
 			}
 		},
 		mounted() {
 			this.lb = this.label
 			this.tp = this.type
-		},
-		updated() {
-			this.$emit('data', this.data)
 		}
 	}
 </script>
