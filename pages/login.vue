@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 	useHead({
 		title: 'Login'
 	})
@@ -32,7 +32,7 @@
 	</main>
 </template>
 
-<script lang="ts">
+<script>
 	export default {
 		data() {
 			return {

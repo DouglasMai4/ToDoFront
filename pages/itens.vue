@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 	useHead({
 		title: 'Itens'
 	})
@@ -40,7 +40,7 @@
 	</main>
 </template>
 
-<script lang="ts">
+<script>
 	export default {
 		data() {
 			return {

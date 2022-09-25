@@ -16,7 +16,7 @@
 	</div>
 </template>
 
-<script lang="ts">
+<script>
 	export default {
 		props: {
 			titulo: String,
@@ -42,7 +42,8 @@
 
 	span {
 		max-width: 200px;
-		overflow-x: scroll;
+		/*verflow-x: scroll;*/
+		overflow-x: auto;
 		font-size: 1.2em;
 	}
 
