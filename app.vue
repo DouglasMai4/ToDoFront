@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
   useHead({
     titleTemplate: (pageName) => {
       return pageName ? `${pageName} - ToDo` : 'ToDo'
@@ -18,7 +18,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script>
   export default {
     mounted() {
       this.loginStore.startLogin()
