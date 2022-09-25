@@ -21,7 +21,7 @@
 <script>
   export default {
     mounted() {
-      this.loginStore.startLogin()
+      loginStore.startLogin()
     }
   }
 </script>
