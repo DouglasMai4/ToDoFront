@@ -39,7 +39,7 @@
 				<h1>Login</h1>
 				<hr />
 				
-				<formInput
+				<!-- <formInput
 					type="text"
 					label="Email"
 					:action="false"
@@ -51,7 +51,10 @@
 					label="Senha"
 					:action="true"
 					v-model="password"
-				/>
+				/> -->
+
+				<input type="email" label="Email" v-model="email">
+				<input type="password" label="Senha" v-model="password">
 
 				<formButton label="Entrar" type="submit" :disabled="btnDisabled" btnStyle="text" />
 			</form>
@@ -92,6 +95,19 @@
 		display: flex;
 		flex-direction: column;
 		gap: 15px;
+	}
+
+	input {
+		border: 1px solid var(--bg-secondary);
+		border-radius: 10px;
+
+		font-size: 1em;
+
+		padding: 5px;
+
+		outline: none;
+
+		color: var(--text-color);
 	}
 
 	@media screen and (max-width: 600px) {
