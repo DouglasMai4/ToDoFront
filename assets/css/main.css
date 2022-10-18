@@ -1,0 +1,52 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+:root {
+	--bg-color: #121212;
+	--bg-color-t: rgba(18, 18, 18, 0.5);
+
+	--bg-color-s: #202020;
+
+	--c-primary: #7400B8;
+	--c-primary-t: rgba(116, 0, 184, 0.7);
+
+	--c-secondary: #56CFE1;
+	--c-secondary-t: rgba(86, 207, 225, 0.7);
+
+	--gradient: linear-gradient(to right, var(--c-primary), var(--c-secondary));
+
+	--text-color: #FFF;
+}
+
+body {
+	background-image: url('/imgs/background.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+
+	color: var(--text-color);
+
+	font-family: Arial;
+
+	min-height: 100vh;
+}
+
+hr {
+	border: 1px solid var(--c-primary);
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+
+	text-align: center;
+
+	padding: 25px;
+	
+	background-color: var(--bg-color-t);
+	backdrop-filter: blur(10px);
+
+	border-radius: 10px;
+}
