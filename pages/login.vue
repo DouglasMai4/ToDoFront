@@ -39,8 +39,8 @@
 				<h1>Login</h1>
 				<hr />
 				
-				<!-- <formInput
-					type="text"
+				<formInput
+					type="email"
 					label="Email"
 					:action="false"
 					v-model="email"
@@ -51,10 +51,10 @@
 					label="Senha"
 					:action="true"
 					v-model="password"
-				/> -->
+				/>
 
-				<input type="email" label="Email" v-model="email">
-				<input type="password" label="Senha" v-model="password">
+				<!-- <input type="email" label="Email" v-model="email">
+				<input type="password" label="Senha" v-model="password"> -->
 
 				<formButton label="Entrar" type="submit" :disabled="btnDisabled" btnStyle="text" />
 			</form>
