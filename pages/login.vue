@@ -98,7 +98,7 @@
 	}
 
 	input {
-		border: 1px solid var(--bg-secondary);
+		background-color: var(--bg-secondary);
 		border-radius: 10px;
 
 		font-size: 1em;
