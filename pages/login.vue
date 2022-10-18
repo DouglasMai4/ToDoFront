@@ -53,9 +53,6 @@
 					v-model="password"
 				/>
 
-				<!-- <input type="email" label="Email" v-model="email">
-				<input type="password" label="Senha" v-model="password"> -->
-
 				<formButton label="Entrar" type="submit" :disabled="btnDisabled" btnStyle="text" />
 			</form>
 		</div>
